@@ -1,0 +1,209 @@
+html {
+    font-size: 100%;
+    font-family: "Noto Sans Japanese", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 2;
+    color: #345;
+    background-color: #f8f8f8;
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: "Sawarabi Mincho", Kokoro, serif;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    padding-top: 1.75rem;
+    padding-bottom: 2.625rem;
+}
+
+h2 {
+    font-size: 1.375rem;
+    font-weight: normal;
+    padding-top: 2.625rem;
+    padding-bottom: 1.75rem;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    margin-top: 2.9625rem;
+    margin-top: 2.1875rem;
+    padding-bottom: .475em;
+    padding-bottom: 1.75em;
+    line-height: 1.25;
+}
+
+
+table, p, ol, ul, blockquote {
+    margin-top: .4375rem;
+    margin-bottom: 2.1875rem;
+}
+
+blockquote {
+    border-radius: .125rem;
+    background-color: #ddd;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: .5em 1em;
+    color: #234;
+}
+
+blockquote > p {
+    margin-top: .5rem;
+    margin-bottom: .5em;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    padding: .5em .25em .5em;
+    font-weight: bold;
+    color: #007B43;
+}
+
+ol, ul {
+    padding-left: 1.75rem;
+}
+
+li {
+    line-height: 1.5;
+    margin-bottom: .875rem;
+}
+
+li > ul {
+    margin-top: 1.125rem;
+    margin-bottom: 0;
+}
+
+table {
+    border-top: 1px solid #888;
+    border-collapse: collapse;
+}
+
+th, td {
+    font-size: .8125rem;
+    padding: .25rem .5rem .25rem 0;
+    line-height: 1.5;
+}
+
+th {
+    font-weight: bold;
+    border-bottom: 1px solid #888;
+}
+
+td {
+    border-bottom: 1px solid #ccc;
+}
+
+tr:last-child td {
+    border-bottom: 1px solid #888;
+}
+
+td:last-child {
+    padding-right: 0;
+}
+
+em {
+    color: #012;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+#mainContent {
+    padding: 1.75rem;
+    text-align: justify;
+    background-color: #f8f8f8;
+}
+
+#contentEnd {
+    margin: 0 auto 2.625rem;
+    padding: 0 1.75rem 3.5rem;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+#contentEnd > a {
+    padding: 1em 2em;
+    font-weight: bold;
+}
+#contentEnd > a > i {
+    vertical-align: middle;
+}
+
+#fixedFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.625rem;
+    padding: 0;
+    background-color: #D4D9D6;
+}
+
+#fixedFooter .flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#fixedFooter a {
+    padding: .4375rem 1.75rem;
+}
+
+#fixedFooter i {
+    font-size: 1.25rem;
+    vertical-align: middle;
+    opacity: .5;
+    margin-left: -.125rem;
+    margin-right: .125rem;
+}
+
+#fixedFooter span {
+    font-weight: bold;
+    font-weight: normal;
+}
+
+#toHome, #toIndex, #toHeadline {
+    color: #5D605D;
+    padding: .875rem 1.75rem;
+}
+
+@media( min-width: 600px ){
+
+    body { 
+        font-size: 1rem;
+    }
+
+    .content {
+        max-width: 30rem;
+        max-width: 38rem;
+        margin: 0 auto;
+    }
+
+    #mainContent {
+        padding: 2rem 2rem 4rem;
+    }
+    #contentEnd {
+        padding: 1rem 2rem 6rem;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+}

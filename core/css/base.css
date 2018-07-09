@@ -1,0 +1,425 @@
+/*
+    - Default
+    - Layout
+    - Color
+    - Module
+ */
+
+/* Default
+ * ---------------------------------------- */
+
+
+html, body, header, nav, article, footer,
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd,
+table, caption, thead, tbody, tfoot, tr, ht, td, 
+p, blockquote, pre {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: .9375rem;
+    font-weight: 500;
+    line-height: 1.25;
+    text-justify: justify;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+h2 {
+    margin: 0;
+    padding-top: 4rem;
+    padding-bottom :.5rem;
+    border-bottom: .0625rem solid hsla( 0, 0%, 100%, .1 );
+}
+
+h3 {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: .5rem;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+p {
+    margin: 1.5em 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 1em 0 1em 1.75rem;
+    line-height: 1.25;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: .5rem 0;
+}
+
+th, td {
+    border-bottom: 1px solid #ccc;
+    padding: .25rem 1rem .25rem 0;
+    font-size: .875rem;
+}
+
+
+/* Layout
+ * ---------------------------------------- */
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* header */
+.header.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    box-shadow: 0 0 .5rem hsla( 0, 0%, 0%, .5 );
+}
+
+.header.wrapper > .content {
+    display: flex;
+    font-size: 1.5rem;
+    line-height: 1;
+    justify-content: space-between;
+}
+
+.header.wrapper > .content > i {
+    margin: .25rem -.25rem;
+}
+
+.header.wrapper > .content > .material-icons.menu {
+    margin-left: -1rem;
+    padding: .75rem;
+    cursor: pointer;
+}
+
+.header.wrapper > .content > .material-icons.info {
+    margin-right: -1rem;
+    padding: .75rem;
+    opacity: 0;
+}
+
+.header.wrapper > .content > h1 {
+    margin: .875rem;
+    flex-grow: 30;
+    text-align: center;    
+}
+
+/* main */
+.main.wrapper {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    padding: 0 .25rem;
+}
+
+.main.wrapper > .content {
+    box-sizing: border-box;
+    padding: .25rem .75rem .5rem;
+    border-radius: .125rem;
+    box-shadow: 0 .0625rem .25rem hsla( 0, 0%, 0%, .25 );    
+}
+
+#mainContent.flash {
+    transition: all .25s;
+    opacity: 0;
+}
+
+
+/* nav */
+.nav.wrapper {
+    transition: opacity .25s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.nav.wrapper.visible {
+    transition: opacity .25s;
+    opacity: 1;
+    width: 100%;
+}
+
+.nav.wrapper > .content {
+    transition: all .25s;
+    position: absolute;
+    margin: 0 0 0 -15rem;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    opacity: 1;
+    box-shadow: 0 0 .5rem hsla( 0, 0%, 0%, .5 );
+    list-style: none;
+}
+
+.nav.wrapper.visible > .content {
+    transition: all .25s;
+    margin-left: 0;
+    width: 15rem;
+}
+
+#contentMenu {
+    list-style: none;
+}
+
+#contentMenu > li {
+    margin: 0;
+    line-height: 1.25;
+}
+
+#contentMenu > .close {
+    padding: .75rem 1rem;
+}
+
+#contentMenu > .noicon > a {
+    text-indent: 1.5rem;
+}
+
+#contentMenu > li > a {
+    display: block;
+    padding: .75rem 1rem;
+    line-height: 1.25;
+    color: inherit;
+}
+
+#contentMenu > li .material-icons {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin-right: 1rem;
+    opacity: .25;
+}
+
+
+
+
+/* footer */
+.footer.wrapper {
+    font-size: .75rem;
+}
+
+.footer.wrapper > .content {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+/* Color theme
+ * ---------------------------------------- */
+
+/* Dark
+
+body {
+    background-color: hsla( 0, 0%, 10%, 1 );
+    color: hsla( 0, 0%, 80%, 1 );
+}
+
+.header.wrapper {
+    background-color: hsla( 0, 0%, 20%, 1 );
+    color: hsla( 0, 0%, 90%, 1 );
+}
+
+.header.wrapper > .content > i {
+    color: hsla( 0, 0%, 100%, .5 );
+}
+
+.main.wrapper {
+    background-color: hsla( 0, 0%, 10%, 1 );
+    color: hsla( 0, 0%, 70%, 1 );
+}
+
+#toTop > i {
+    background-color: hsla( 0, 0%, 20%, 1 );
+}
+
+.nav.wrapper {
+    background-color: hsla( 0, 0%, 15%, .9 );
+}
+
+.nav.wrapper > .content {
+    background-color: hsla( 0, 0%, 20%, 1 );
+    color: hsla( 0, 0%, 90%, 1 );
+}
+
+.footer.wrapper {
+    background-color: hsla( 0, 0%, 5%, 1 );
+    color: hsla( 0, 0%, 40%, 1 );
+}
+
+
+a {
+    color: #4d4;
+}
+
+h2 {
+    color: hsla( 0, 0%, 70%, 1 );
+}
+
+h3 {
+    color: hsla( 0, 0%, 90%, 1 );    
+}
+*/
+
+/* Light theme
+    #ffecb3 Primary
+    #ffffe5 P-Light
+    #cbba83 P-Dark
+    #00838f Secondary
+    #4fb3bf S-Light
+    #005662 S-Dark
+ */
+body {
+    background-color: #e8e8e8;
+    color: #000000;
+}
+
+.header.wrapper {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.header.wrapper > .content > i {
+    color: #000000;
+}
+
+.main.wrapper > .content {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.nav.wrapper {
+    background-color: hsla( 0, 0%, 15%, .9 );
+}
+
+.nav.wrapper > .content {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.nav a:hover {
+    background-color: #4fb3bf;
+}
+
+.footer.wrapper {
+    color: #666666;
+}
+
+a {
+    color: #005662;
+}
+
+h2 {
+    border-color: #00838f
+}
+
+h3 {
+
+}
+
+
+/* Modules
+ * ---------------------------------------- */
+
+.transparent {
+    transition: opacity .5s;
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#toTop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 2.5rem;
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #005662;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 0 .25rem hsla( 0, 0%, 0%, .5 );
+    transition: all .25s;
+}
+
+#toTop:hover {
+}
+
+#toTop i {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+
+
+
+/* Desktop monitor
+ * ---------------------------------------- */
+
+@media( min-width: 50rem ){
+    body {
+        font-size: 1rem;
+    }
+    .header > .content,
+    .main > .content,
+    .footer > .content {
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+    .main.wrapper {
+        padding: 0;
+    }
+    .main.wrapper > .content {
+        box-sizing: content-box;
+        padding: 1rem;
+    }
+}
